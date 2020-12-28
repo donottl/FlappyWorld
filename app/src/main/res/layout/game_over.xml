@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_final"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="#FF3D00"
+        android:text="Game Over !!!"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="80dp"
+        android:id="@+id/gameover"
+        >
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="#00E676"
+        android:text="Game Over !!!"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/gameover"
+        android:id="@+id/score"
+        >
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="#00E676"
+        android:text="Game Over !!!"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/score"
+        android:id="@+id/highscore"
+        >
+    </TextView>
+
+    <Button
+        android:id="@+id/restart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restart"
+        android:onClick="restartGame"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#ff9e22"
+        android:textSize="30sp"
+        android:layout_below="@id/highscore"/>
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:onClick="backtomain"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#ff9e22"
+        android:textSize="30sp"
+        android:layout_below="@id/restart"/>
+
+
+
+
+</RelativeLayout>

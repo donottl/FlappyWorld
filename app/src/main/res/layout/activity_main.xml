@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:fillAfter="true"
+    android:fromAlpha="1.0"
+    android:toAlpha="0.0"
+    android:duration="500"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_final"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context=".MainActivity"
+    xmlns:tools="http://schemas.android.com/tools">
+    <Button
+        android:id="@+id/buttonstart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:backgroundTint="#00D535"
+        android:onClick="startGame"
+        android:text="Start"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#ff9e22"
+        android:layout_below="@id/buttonstart"/>
+
+    <Button
+        android:layout_margin="16dp"
+        android:padding="16dp"
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:text="Settings" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#ff9e22"
+        android:textSize="30sp"
+        android:layout_below="@id/button2"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
