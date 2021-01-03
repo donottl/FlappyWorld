@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/activity_main"
+    android:orientation="vertical"
+    android:background="@drawable/background_final">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tube"
+        android:layout_gravity="center"
+        android:id="@+id/TubeButton"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Background"
+        android:layout_gravity="center"
+        android:id="@+id/BackgroundButton"/>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Charackter"
+        android:layout_gravity="center"
+        android:id="@+id/CharackterButton"/>
+
+    <LinearLayout
+        android:layout_below="@id/CharackterButton"
+        android:id="@+id/Pics"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/TubeImage"
+            />
+    </LinearLayout>
+
+</LinearLayout>

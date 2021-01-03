@@ -23,7 +23,7 @@
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/CreateButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Create"
@@ -51,7 +51,25 @@
         android:layout_centerHorizontal="true"
         android:backgroundTint="#ff9e22"
         android:textSize="30sp"
-        android:layout_below="@id/button2"/>
+        android:layout_below="@id/CreateButton"/>
+
+    <LinearLayout
+
+        android:id="@+id/Pics"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/TubeImage"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/CharackterImage"
+            />
+    </LinearLayout>
 
 
 

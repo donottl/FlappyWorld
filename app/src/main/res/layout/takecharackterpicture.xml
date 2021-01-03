@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/takecharackterpicture"
+    android:orientation="vertical"
+    android:background="@drawable/background_final"
+    >
+
+
+    <ImageView
+        android:layout_width="800px"
+        android:layout_height="1066px"
+        android:scaleType="fitXY"
+        android:contentDescription="ok"
+        android:id="@+id/im"
+        />
+
+    <com.example.flappyw.CharackterDrawingView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rechteckView"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:textSize="24dp"
+        android:id="@+id/text1"
+        android:layout_marginBottom="6dp"
+        android:layout_below="@+id/im" />
+
+    <LinearLayout
+        android:layout_below="@id/text1"
+        android:id="@+id/TableRow"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:text="scale"
+            android:textColor="@android:color/black"
+            android:layout_weight="1"
+            />
+
+        <Button
+            android:id="@+id/Button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:text="takepicture"
+            android:textColor="@android:color/black"
+            android:layout_weight="1"
+            />
+
+        <Button
+            android:id="@+id/FinishButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:text="finish"
+            android:textColor="@android:color/black"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="ok2"
+        android:id="@+id/im2"
+        android:layout_below="@+id/TableRow"
+        android:layout_centerHorizontal="true"/>
+
+
+</RelativeLayout>

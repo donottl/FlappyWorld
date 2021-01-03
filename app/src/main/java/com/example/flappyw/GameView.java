@@ -32,6 +32,8 @@ public class GameView extends View {
      public boolean gamerun =true;
      private boolean startgame = false;
      int score = 0;
+     Bitmap Tube;
+     Bitmap Charackter;
 
 
 
@@ -41,6 +43,14 @@ public class GameView extends View {
 
     public GameView(Context context,@Nullable AttributeSet attrs) {
         super(context, attrs);
+        try {
+            Tube = StartGame.returnTube();
+            Charackter = StartGame.returnCharackter();
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("Tube & Char import fail");
+        }
+
         initBird();
         initPipe();
 
@@ -77,12 +87,23 @@ public class GameView extends View {
             if (i < sumpipe / 2) {
                 this.arrayPipes.add(new Pipe(Constants.SCREEN_WIDTH+i*((Constants.SCREEN_WIDTH+200*Constants.SCREEN_WIDTH/1080+400)/(sumpipe/2)),
                                            0,200*Constants.SCREEN_WIDTH/1080,2*Constants.SCREEN_HEIGHT/3));
-                this.arrayPipes.get(this.arrayPipes.size()-1).setBm(BitmapFactory.decodeResource(this.getResources(),R.drawable.t3));
+                if(Tube==null) {
+                    this.arrayPipes.get(this.arrayPipes.size() - 1).setBm(BitmapFactory.decodeResource(this.getResources(), R.drawable.t3));
+                }
+                else{
+                    this.arrayPipes.get(this.arrayPipes.size() - 1).setBm(Tube);
+                }
                 this.arrayPipes.get(this.arrayPipes.size()-1).randomY();
             }else {
                 this.arrayPipes.add(new Pipe(this.arrayPipes.get(i-sumpipe/2).getX(),this.arrayPipes.get(i-sumpipe/2).getY()+this.arrayPipes.get(i-sumpipe/2).getHeight()+this.distance,
                                         200*Constants.SCREEN_WIDTH/1080,2*Constants.SCREEN_HEIGHT/3));
-                this.arrayPipes.get(this.arrayPipes.size()-1).setBm(BitmapFactory.decodeResource(this.getResources(),R.drawable.t3));
+                if(Tube==null) {
+                    this.arrayPipes.get(this.arrayPipes.size() - 1).setBm(BitmapFactory.decodeResource(this.getResources(), R.drawable.t3));
+                }
+                else{
+                    this.arrayPipes.get(this.arrayPipes.size() - 1).setBm(Tube);
+
+                }
             }
 
         }
@@ -93,7 +114,13 @@ public class GameView extends View {
         bird.setHeight(100*Constants.SCREEN_HEIGHT/1920);
         bird.setY(Constants.SCREEN_HEIGHT/2-bird.getHeight());
         bird.setX(100*Constants.SCREEN_WIDTH/1080);
-        birdtest = BitmapFactory.decodeResource(getResources(),R.drawable.flappyfinal);
+        if(Charackter==null) {
+            birdtest = BitmapFactory.decodeResource(getResources(), R.drawable.flappyfinal);
+        }
+        else{
+            birdtest = Charackter;
+
+        }
         bird.setBirdbm(birdtest);
 
     }
